@@ -6,10 +6,8 @@ use App\Http\Controllers\AdminController; // Memanggil Controller Admin
 use App\Http\Controllers\SiswaController; // Memanggil Controller Siswa
 use App\Http\Controllers\ProfileController;
 
-// 1. Rute Halaman Depan (Welcome Page)
-Route::get('/', function () {
-    return view('welcome');
-});
+// Arahkan pengunjung langsung ke halaman login.
+Route::redirect('/', '/login');
 
 // 2. Rute "Penyortir" Pintar (Otomatis arahkan sesuai Role sesaat setelah Login)
 Route::get('/dashboard', function () {
@@ -65,4 +63,3 @@ Route::middleware('auth')->group(function () {
 
 // Bawaan Breeze untuk rute Login, Register, Logout, dll (JANGAN DIHAPUS)
 require __DIR__.'/auth.php';
-
