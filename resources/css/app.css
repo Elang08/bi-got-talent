@@ -1,0 +1,610 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --talent-ink: #211a34;
+    --talent-muted: #777287;
+    --talent-purple: #7555e8;
+    --talent-violet: #a78bfa;
+    --talent-bg: #f7f6fb;
+}
+
+body {
+    font-family: 'Figtree', sans-serif;
+}
+
+.talent-site {
+    margin: 0;
+    color: #fff;
+    background: #130c27;
+}
+
+.talent-landing {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 7.2%;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 77% 32%, rgba(98, 65, 163, .2), transparent 32%),
+        radial-gradient(ellipse at 14% 92%, rgba(75, 40, 118, .16), transparent 30%),
+        #130c27;
+}
+
+.talent-nav {
+    height: 94px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, .09);
+}
+
+.talent-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .16em;
+}
+
+.talent-brand strong {
+    font-weight: 800;
+}
+
+.talent-brand-mark {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    color: #211238;
+    background: linear-gradient(145deg, #f7d782, #eab955);
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: -.04em;
+}
+
+.talent-nav-links,
+.talent-nav-actions,
+.talent-hero-actions {
+    display: flex;
+    align-items: center;
+}
+
+.talent-nav-links {
+    gap: 38px;
+}
+
+.talent-nav-links a,
+.talent-login,
+.talent-text-link {
+    color: #bdb5ce;
+    font-size: 13px;
+    transition: color .2s ease;
+}
+
+.talent-nav-links a:hover,
+.talent-login:hover,
+.talent-text-link:hover {
+    color: #fff;
+}
+
+.talent-nav-actions {
+    gap: 25px;
+}
+
+.talent-button {
+    min-height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 0 22px;
+    color: #1d1530;
+    background: #f2cc75;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 800;
+    box-shadow: 0 10px 28px rgba(242, 204, 117, .12);
+    transition: transform .2s ease, background .2s ease;
+}
+
+.talent-button:hover {
+    transform: translateY(-2px);
+    background: #f7d990;
+}
+
+.talent-button-small {
+    min-height: 42px;
+    padding: 0 16px;
+}
+
+.talent-button-quiet {
+    min-height: 42px;
+    color: #fff;
+    background: rgba(255, 255, 255, .1);
+    box-shadow: none;
+}
+
+.talent-hero {
+    min-height: 585px;
+    display: grid;
+    grid-template-columns: 1fr .92fr;
+    align-items: center;
+    gap: 5%;
+    padding: 56px 0 66px;
+}
+
+.talent-hero-copy {
+    position: relative;
+    z-index: 1;
+    max-width: 590px;
+}
+
+.talent-eyebrow,
+.talent-section-kicker {
+    color: #c4a9ff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .19em;
+}
+
+.talent-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 13px;
+    background: rgba(173, 139, 255, .1);
+    border: 1px solid rgba(173, 139, 255, .17);
+    border-radius: 99px;
+}
+
+.talent-eyebrow span,
+.talent-live-dot {
+    width: 7px;
+    height: 7px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #e8bf64;
+    box-shadow: 0 0 12px rgba(232, 191, 100, .8);
+}
+
+.talent-hero h1 {
+    margin: 25px 0 20px;
+    color: #fff;
+    font-size: clamp(48px, 5.4vw, 76px);
+    font-weight: 800;
+    letter-spacing: -.075em;
+    line-height: 1.02;
+}
+
+.talent-hero h1 span {
+    color: #d4b6ff;
+}
+
+.talent-hero-description {
+    max-width: 470px;
+    margin: 0;
+    color: #a59cb8;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.talent-hero-actions {
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 31px;
+}
+
+.talent-text-link {
+    font-size: 12px;
+}
+
+.talent-proof {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 45px;
+}
+
+.talent-avatar-stack {
+    display: flex;
+    padding-left: 3px;
+}
+
+.talent-avatar-stack span {
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    margin-left: -4px;
+    color: #26143b;
+    background: #d7b5fa;
+    border: 2px solid #130c27;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.talent-avatar-stack span:nth-child(2) { background: #f4ce79; }
+.talent-avatar-stack span:nth-child(3) { background: #f2a6bd; }
+
+.talent-proof p {
+    margin: 0;
+    color: #e9e4f1;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+.talent-proof p span { color: #8f879f; }
+
+.talent-stage {
+    min-height: 420px;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.talent-stage-glow {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(163, 119, 237, .28), rgba(114, 72, 180, .08) 47%, transparent 72%);
+    filter: blur(6px);
+}
+
+.talent-stage-disc {
+    width: 275px;
+    height: 275px;
+    position: absolute;
+    top: 37px;
+    display: grid;
+    place-items: start center;
+    padding-top: 43px;
+    color: #f1c86d;
+    background: linear-gradient(145deg, #39245a, #24153b 65%, #1b1230);
+    border: 1px solid rgba(222, 194, 255, .2);
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px rgba(190, 138, 255, .12), 0 25px 75px rgba(0, 0, 0, .32);
+    font-size: 27px;
+}
+
+.talent-stage-disc::before,
+.talent-stage-disc::after {
+    position: absolute;
+    content: '';
+    border: 1px solid rgba(223, 190, 255, .11);
+    border-radius: 50%;
+}
+
+.talent-stage-disc::before { inset: 20px; }
+.talent-stage-disc::after { inset: 40px; }
+
+.talent-stage-tag {
+    position: absolute;
+    top: 91px;
+    right: 3%;
+    z-index: 3;
+    padding: 12px 15px;
+    color: #ede5fa;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 11px;
+    font-size: 9px;
+    letter-spacing: .15em;
+    line-height: 1.7;
+    transform: rotate(5deg);
+}
+
+.talent-stage-tag strong { color: #f2cd78; }
+
+.talent-stage-person {
+    position: absolute;
+    z-index: 4;
+    bottom: 105px;
+    left: 50%;
+    width: 133px;
+    height: 220px;
+    transform: translateX(-50%);
+}
+
+.talent-person-head {
+    width: 51px;
+    height: 59px;
+    position: absolute;
+    top: 0;
+    left: 42px;
+    background: linear-gradient(135deg, #edc19c, #bb806f);
+    border-radius: 48% 52% 47% 50%;
+    box-shadow: 8px -8px 0 -2px #261637;
+}
+
+.talent-person-body {
+    width: 81px;
+    height: 128px;
+    position: absolute;
+    top: 50px;
+    left: 27px;
+    background: linear-gradient(115deg, #c7a4f4, #805ac3);
+    border-radius: 45% 45% 12px 12px;
+    transform: perspective(90px) rotateX(-5deg);
+}
+
+.talent-person-body::before,
+.talent-person-body::after {
+    width: 18px;
+    height: 135px;
+    position: absolute;
+    top: 103px;
+    content: '';
+    background: #28203b;
+    border-radius: 10px;
+}
+
+.talent-person-body::before { left: 14px; transform: rotate(7deg); }
+.talent-person-body::after { right: 12px; transform: rotate(-6deg); }
+
+.talent-person-arm {
+    width: 20px;
+    height: 110px;
+    position: absolute;
+    top: 40px;
+    left: 101px;
+    z-index: -1;
+    background: linear-gradient(#e9bd9d, #bd8379);
+    border-radius: 12px;
+    transform: rotate(-43deg);
+    transform-origin: top center;
+}
+
+.talent-stage-platform {
+    width: 280px;
+    height: 84px;
+    position: absolute;
+    bottom: 45px;
+    z-index: 5;
+    display: grid;
+    place-items: center;
+    color: #2b1a35;
+    background: linear-gradient(180deg, #f4d27f, #dca94e);
+    border-radius: 50%;
+    box-shadow: 0 13px 35px rgba(235, 183, 88, .2), inset 0 -9px 0 rgba(131, 79, 37, .17);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .2em;
+}
+
+.talent-stage-base {
+    width: 218px;
+    height: 33px;
+    position: absolute;
+    bottom: 31px;
+    z-index: 4;
+    background: #8b603d;
+    border-radius: 0 0 50% 50%;
+}
+
+.talent-stage-caption {
+    position: absolute;
+    bottom: 1px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #8f879f;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: .18em;
+}
+
+.talent-live-dot { width: 6px; height: 6px; background: #db9adc; box-shadow: 0 0 10px #c180ef; }
+.talent-spark { position: absolute; z-index: 4; color: #e8c36e; }
+.talent-spark-one { top: 83px; left: 13%; font-size: 25px; }
+.talent-spark-two { top: 193px; right: 10%; color: #d2aafa; font-size: 23px; }
+
+.talent-categories {
+    padding: 47px 0 70px;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+}
+
+.talent-section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 23px;
+}
+
+.talent-section-kicker { color: #b99bfa; font-size: 9px; }
+.talent-section-heading h2 { margin: 8px 0 0; color: #fff; font-size: 27px; font-weight: 800; letter-spacing: -.05em; }
+.talent-section-heading > p { max-width: 300px; margin: 0 0 3px; color: #938ba2; font-size: 11px; line-height: 1.8; }
+
+.talent-category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.talent-category-card {
+    min-height: 176px;
+    position: relative;
+    padding: 21px 22px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, .045);
+    border: 1px solid rgba(255, 255, 255, .085);
+    border-radius: 17px;
+    transition: transform .2s ease, background .2s ease;
+}
+
+.talent-category-card:hover { transform: translateY(-4px); background: rgba(255, 255, 255, .075); }
+.talent-category-icon { width: 37px; height: 37px; display: grid; place-items: center; border-radius: 12px; font-size: 18px; }
+.talent-card-purple .talent-category-icon { color: #d4bcff; background: rgba(162, 120, 236, .2); }
+.talent-card-pink .talent-category-icon { color: #ffaac8; background: rgba(234, 111, 162, .16); }
+.talent-card-gold .talent-category-icon { color: #f4d07d; background: rgba(235, 187, 91, .16); }
+.talent-category-number { position: absolute; top: 26px; right: 22px; color: #6e647e; font-size: 10px; letter-spacing: .12em; }
+.talent-category-card h3 { margin: 17px 0 6px; color: #f5f1fa; font-size: 13px; font-weight: 700; }
+.talent-category-card p { max-width: 270px; margin: 0; color: #938ba2; font-size: 10px; line-height: 1.8; }
+.talent-card-arrow { position: absolute; right: 20px; bottom: 19px; color: #c5a9f4; font-size: 16px; }
+
+.talent-footer {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+}
+
+.talent-footer .talent-brand-mark { width: 29px; height: 29px; border-radius: 9px; font-size: 10px; }
+.talent-footer .talent-brand { font-size: 10px; }
+.talent-footer > span { color: #8f879f; font-size: 10px; }
+
+.talent-app-body {
+    min-height: 100vh;
+    color: var(--talent-ink);
+    background: #f3f4f6;
+}
+
+.talent-app-header {
+    color: var(--talent-ink);
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .08);
+}
+
+.talent-page {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+}
+
+.talent-page-hero {
+    position: relative;
+    padding: 34px;
+    overflow: hidden;
+    color: #fff;
+    background: linear-gradient(115deg, #30204d, #5c3e88 62%, #7956a2);
+    border-radius: 23px;
+    box-shadow: 0 18px 44px rgba(58, 36, 90, .14);
+}
+
+.talent-page-hero::after {
+    width: 230px;
+    height: 230px;
+    position: absolute;
+    top: -92px;
+    right: -38px;
+    content: '';
+    border: 1px solid rgba(255, 255, 255, .16);
+    border-radius: 50%;
+    box-shadow: 0 0 0 25px rgba(255, 255, 255, .035), 0 0 0 52px rgba(255, 255, 255, .025);
+}
+
+.talent-page-kicker { color: #dfceff; font-size: 10px; font-weight: 800; letter-spacing: .16em; }
+.talent-page-hero h1 { margin: 11px 0 8px; color: #fff; font-size: clamp(26px, 4vw, 38px); font-weight: 800; letter-spacing: -.05em; }
+.talent-page-hero p { max-width: 610px; margin: 0; color: #ded4ec; font-size: 13px; line-height: 1.8; }
+
+.talent-stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 20px 0; }
+.talent-stat-card { padding: 19px 21px; background: #fff; border: 1px solid #eeebf5; border-radius: 16px; box-shadow: 0 8px 24px rgba(37, 26, 59, .035); }
+.talent-stat-card span { display: block; color: var(--talent-muted); font-size: 11px; font-weight: 600; }
+.talent-stat-card strong { display: block; margin-top: 9px; color: #37264f; font-size: 28px; font-weight: 800; letter-spacing: -.05em; }
+
+.talent-panel { margin-top: 20px; padding: 24px; background: #fff; border: 1px solid #eeebf5; border-radius: 18px; box-shadow: 0 8px 24px rgba(37, 26, 59, .035); }
+.talent-panel-heading { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin-bottom: 18px; }
+.talent-panel-heading h2 { margin: 0; color: #302342; font-size: 16px; font-weight: 800; letter-spacing: -.03em; }
+.talent-panel-heading p { margin: 5px 0 0; color: #898397; font-size: 11px; }
+.talent-panel-icon { width: 39px; height: 39px; display: grid; place-items: center; flex: none; color: #7252cf; background: #f1ecff; border-radius: 12px; font-size: 17px; }
+.talent-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+.talent-field { display: flex; flex-direction: column; gap: 7px; }
+.talent-field label { color: #4c4558; font-size: 11px; font-weight: 700; }
+.talent-field input, .talent-field select, .talent-field textarea { width: 100%; padding: 11px 12px; color: #342c40; background: #fbfaff; border: 1px solid #e7e2ef; border-radius: 10px; font: inherit; font-size: 12px; outline: none; }
+.talent-field input:focus, .talent-field select:focus, .talent-field textarea:focus { border-color: #9e84e8; box-shadow: 0 0 0 3px rgba(117, 85, 232, .11); }
+.talent-field textarea { min-height: 84px; resize: vertical; }
+.talent-primary-button { min-height: 43px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 0 16px; color: #fff; background: #7050d4; border: 0; border-radius: 10px; font: inherit; font-size: 11px; font-weight: 800; cursor: pointer; transition: background .2s ease, transform .2s ease; }
+.talent-primary-button:hover { transform: translateY(-1px); background: #5e3dc3; }
+.talent-muted { color: #898397; font-size: 11px; line-height: 1.8; }
+.talent-alert { margin-bottom: 16px; padding: 12px 15px; border-radius: 11px; font-size: 12px; }
+.talent-alert-success { color: #226b50; background: #e8f7f0; border: 1px solid #c9ecdc; }
+.talent-alert-error { color: #9b3550; background: #fff0f2; border: 1px solid #f7d5dd; }
+.talent-table-wrap { overflow-x: auto; }
+.talent-table { width: 100%; border-collapse: collapse; text-align: left; }
+.talent-table th { padding: 11px 13px; color: #898397; background: #faf9fc; font-size: 10px; font-weight: 800; letter-spacing: .05em; }
+.talent-table td { padding: 13px; color: #514a5d; border-bottom: 1px solid #f0edf4; font-size: 11px; vertical-align: middle; }
+.talent-table tr:last-child td { border-bottom: 0; }
+.talent-status { display: inline-flex; padding: 6px 9px; color: #8b681e; background: #fff5d8; border-radius: 99px; font-size: 10px; font-weight: 700; white-space: nowrap; }
+.talent-status-final { color: #4d378e; background: #efe9ff; }
+.talent-status-training { color: #276b68; background: #e4f7f4; }
+.talent-inline-form { display: flex; align-items: center; gap: 7px; }
+.talent-inline-form select { max-width: 185px; padding: 8px 9px; background: #fbfaff; border: 1px solid #e7e2ef; border-radius: 8px; font-size: 10px; }
+.talent-small-button { padding: 8px 10px; color: #fff; background: #7050d4; border: 0; border-radius: 8px; font-size: 10px; font-weight: 700; cursor: pointer; }
+.talent-action-link { display: inline-flex; padding: 7px 9px; color: #6346be; background: #f0ebff; border-radius: 8px; font-size: 10px; font-weight: 700; }
+.talent-danger-button { padding: 7px 9px; color: #a23d51; background: #fff0f2; border: 0; border-radius: 8px; font-size: 10px; font-weight: 700; cursor: pointer; }
+.talent-empty { padding: 27px 14px; color: #8d8798; text-align: center; font-size: 11px; }
+.talent-empty strong { display: block; margin-bottom: 4px; color: #43384f; font-size: 13px; }
+
+.talent-guest-shell {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 36px 18px;
+    background:
+        radial-gradient(ellipse at 14% 14%, rgba(199, 180, 255, .3), transparent 32%),
+        radial-gradient(ellipse at 88% 86%, rgba(244, 206, 121, .18), transparent 28%);
+}
+
+.talent-guest-content { width: min(100%, 440px); }
+.talent-guest-brand { display: flex; align-items: center; justify-content: center; gap: 11px; margin: 0 auto 24px; color: #302342; font-size: 13px; font-weight: 700; letter-spacing: .16em; }
+.talent-guest-brand strong { font-weight: 800; }
+.talent-guest-brand .talent-brand-mark { width: 42px; height: 42px; border-radius: 14px; font-size: 14px; }
+.talent-guest-card { padding: 32px; background: rgba(255, 255, 255, .96); border: 1px solid rgba(231, 226, 239, .9); border-radius: 22px; box-shadow: 0 24px 70px rgba(44, 29, 73, .12); }
+.talent-auth-heading { margin-bottom: 25px; }
+.talent-auth-heading h1 { margin: 8px 0 6px; color: #302342; font-size: 25px; font-weight: 800; letter-spacing: -.05em; }
+.talent-auth-heading p { margin: 0; color: #898397; font-size: 12px; line-height: 1.7; }
+.talent-auth-field label { color: #4c4558; font-size: 12px; font-weight: 700; }
+.talent-auth-field input { min-height: 46px; padding: 10px 13px; color: #342c40; background: #fbfaff; border: 1px solid #e7e2ef; border-radius: 11px; font-size: 13px; box-shadow: none; }
+.talent-auth-field input:focus { border-color: #9e84e8; outline: none; box-shadow: 0 0 0 3px rgba(117, 85, 232, .12); }
+.talent-auth-actions { display: flex; flex-direction: column; align-items: stretch; gap: 14px; }
+.talent-auth-link { color: #7050d4; font-size: 12px; font-weight: 700; text-align: center; }
+.talent-auth-link:hover { color: #5032ac; text-decoration: underline; }
+.talent-auth-submit { min-height: 46px !important; color: #fff !important; background: #7050d4 !important; border: 0 !important; border-radius: 11px !important; font-size: 12px !important; letter-spacing: .02em !important; text-transform: none !important; box-shadow: 0 9px 20px rgba(112, 80, 212, .2); }
+.talent-auth-submit:hover { background: #5e3dc3 !important; }
+.talent-auth-switch { margin: 22px 0 0; color: #898397; font-size: 12px; text-align: center; }
+.talent-auth-switch a { color: #7050d4; font-weight: 800; }
+.talent-guest-footer { margin: 18px 0 0; color: #898397; font-size: 11px; text-align: center; }
+.talent-table tbody tr:hover { background: #fcfbff; }
+.talent-inline-form select:focus, .talent-inline-form button:focus-visible, .talent-primary-button:focus-visible, .talent-small-button:focus-visible, .talent-action-link:focus-visible, .talent-danger-button:focus-visible { outline: 3px solid rgba(117, 85, 232, .24); outline-offset: 2px; }
+
+@media (max-width: 760px) {
+    .talent-landing { padding: 0 6%; }
+    .talent-nav { height: 74px; }
+    .talent-nav-links { display: none; }
+    .talent-nav-actions { gap: 13px; }
+    .talent-login { font-size: 11px; }
+    .talent-button-small { min-height: 38px; padding: 0 12px; font-size: 10px; }
+    .talent-hero { grid-template-columns: 1fr; gap: 10px; padding: 55px 0 39px; }
+    .talent-hero h1 { font-size: clamp(48px, 12vw, 72px); }
+    .talent-hero-description { font-size: 13px; }
+    .talent-proof { margin-top: 29px; }
+    .talent-stage { min-height: 360px; transform: scale(.9); margin: -12px 0; }
+    .talent-section-heading { align-items: start; flex-direction: column; gap: 8px; }
+    .talent-category-grid { grid-template-columns: 1fr; }
+    .talent-category-card { min-height: 155px; }
+    .talent-categories { padding: 35px 0 43px; }
+    .talent-footer { align-items: start; flex-direction: column; justify-content: center; gap: 10px; padding: 20px 0; }
+}
+
+@media (max-width: 640px) {
+    .talent-guest-shell { padding: 25px 16px; }
+    .talent-guest-card { padding: 25px 21px; border-radius: 18px; }
+    .talent-page { padding: 21px 14px 45px; }
+    .talent-page-hero { padding: 26px 21px; border-radius: 18px; }
+    .talent-stat-grid { gap: 8px; }
+    .talent-stat-card { padding: 14px 12px; border-radius: 13px; }
+    .talent-stat-card span { font-size: 9px; }
+    .talent-stat-card strong { font-size: 23px; }
+    .talent-panel { padding: 18px 15px; border-radius: 15px; }
+    .talent-form-grid { grid-template-columns: 1fr; }
+    .talent-inline-form { align-items: stretch; flex-direction: column; }
+    .talent-inline-form select { max-width: none; }
+    .talent-table th, .talent-table td { padding: 10px 9px; }
+}
